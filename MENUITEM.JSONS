@@ -1,0 +1,54 @@
+{
+  "name": "MenuItem",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "price": {
+      "type": "number"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "Starters",
+        "Main Course",
+        "Desserts",
+        "Beverages",
+        "Soups",
+        "Biryani & Rice",
+        "Breads",
+        "Chinese"
+      ]
+    },
+    "image_url": {
+      "type": "string"
+    },
+    "is_veg": {
+      "type": "boolean",
+      "default": true
+    },
+    "is_available": {
+      "type": "boolean",
+      "default": true
+    },
+    "spice_level": {
+      "type": "string",
+      "enum": [
+        "Mild",
+        "Medium",
+        "Spicy",
+        "Extra Spicy"
+      ],
+      "default": "Medium"
+    }
+  },
+  "required": [
+    "name",
+    "price",
+    "category"
+  ]
+}
